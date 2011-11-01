@@ -11,14 +11,10 @@ module DebesoWikimacro
       end
       atag = args[0]
       doc = REXML::Document.new(atag)
-      code_json = ''
-      open(doc.root.text) {|f| code_json = f.read}
-      json = JSON.parse(code_json)
-      puts "***********"
-      p json
-      puts "***********"
-      
-      "<pre>" + json['content'] + "</pre>"
+      code = ''
+      puts doc.root.text
+      open(doc.root.text) {|f| code = f.read}
+      code
     end
   end
 end
