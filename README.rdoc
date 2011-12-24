@@ -1,3 +1,0 @@
-= debeso_wiki_macro
-
-Description goes here
